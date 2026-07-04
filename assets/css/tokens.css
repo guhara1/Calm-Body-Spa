@@ -1,0 +1,78 @@
+/* =============================================================
+   간다GO · Design Tokens
+   프리미엄 팔레트 (딥 네이비 + 오렌지 액센트)
+   Pretendard 기반 · 라이트/다크 대응
+   ============================================================= */
+
+/* ---- Pretendard (self-hostable weight-variable fallback) ---- */
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 45 920;
+  font-display: swap;
+  font-style: normal;
+  src: local("Pretendard Variable"), local("Pretendard");
+}
+
+:root {
+  /* --- 브랜드 코어 --- */
+  --brand-500: #ff7a18;          /* 메인 오렌지 */
+  --brand-400: #ff8f3c;
+  --brand-600: #f26a04;
+  --brand-700: #d65c00;
+  --brand-glow: rgba(255, 122, 24, 0.45);
+  --brand-soft: rgba(255, 122, 24, 0.12);
+
+  /* --- 프리미엄 네이비 배경 스케일 --- */
+  --bg-900: #0a1120;             /* 페이지 최하단 */
+  --bg-850: #0d1526;             /* 기본 배경 */
+  --bg-800: #111c33;             /* 섹션 */
+  --surface: #16233f;            /* 카드 */
+  --surface-2: #1c2c4d;          /* 카드 hover / 강조 카드 */
+  --surface-line: rgba(255, 255, 255, 0.08);
+
+  /* --- 텍스트 --- */
+  --text-hi: #f4f7fc;
+  --text: #cdd6e6;
+  --text-mid: #9aa8c2;
+  --text-low: #6d7d9c;
+
+  /* --- 기능 색 --- */
+  --ok: #34d399;
+  --warn: #fbbf24;
+
+  /* --- 라디우스 --- */
+  --r-sm: 10px;
+  --r-md: 16px;
+  --r-lg: 22px;
+  --r-pill: 999px;
+
+  /* --- 그림자 / 글로우 --- */
+  --shadow-card: 0 18px 45px -22px rgba(0, 0, 0, 0.75);
+  --shadow-float: 0 14px 34px -8px var(--brand-glow);
+  --ring: 0 0 0 1px var(--surface-line);
+
+  /* --- 타이포 --- */
+  --font-sans: "Pretendard", "Pretendard Variable", -apple-system,
+    BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+
+  /* --- 레이아웃 --- */
+  --wrap: 1120px;
+  --gutter: clamp(18px, 5vw, 40px);
+  --header-h: 64px;
+}
+
+/* 라이트 테마 오버레이 (선호에 따라 자동 전환) */
+:root[data-theme="light"] {
+  --bg-900: #eef1f7;
+  --bg-850: #f5f7fb;
+  --bg-800: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #fbfcfe;
+  --surface-line: rgba(15, 26, 48, 0.10);
+  --text-hi: #0d1526;
+  --text: #33415c;
+  --text-mid: #5a6a86;
+  --text-low: #8493ad;
+  --shadow-card: 0 16px 40px -24px rgba(15, 26, 48, 0.35);
+  --ring: 0 0 0 1px var(--surface-line);
+}
