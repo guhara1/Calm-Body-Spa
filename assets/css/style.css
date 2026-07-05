@@ -91,6 +91,28 @@ a { color: inherit; text-decoration: none; }
 
 .cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
 
+/* 히어로 2단(텍스트 + 4:3 이미지) */
+.hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: clamp(24px, 5vw, 56px); align-items: center; }
+.hero-media {
+  position: relative; margin: 0; width: 100%; aspect-ratio: 4 / 3;
+  border-radius: var(--r-lg); overflow: hidden;
+  border: 1px solid var(--surface-line); box-shadow: var(--shadow-card);
+  background:
+    radial-gradient(120% 120% at 80% 0%, rgba(255,122,24,0.22), transparent 55%),
+    linear-gradient(135deg, var(--surface-2), var(--surface));
+}
+.hero-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero-ph {
+  position: absolute; inset: 0; display: none; place-items: center; text-align: center;
+  color: var(--text-mid); font-size: 15px; font-weight: 700; letter-spacing: -0.01em;
+}
+.hero-ph small { color: var(--text-low); font-weight: 500; }
+.hero-media.is-empty .hero-ph { display: grid; }
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-media { max-width: 520px; }
+}
+
 /* ---------- 버튼 ---------- */
 .btn {
   --_bg: var(--surface); --_fg: var(--text-hi);
