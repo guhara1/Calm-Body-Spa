@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://calm-body-spa.example/sitemap.xml
+Sitemap: https://calm-body-spa.pages.dev/sitemap.xml
