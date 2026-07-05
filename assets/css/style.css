@@ -207,6 +207,28 @@ a { color: inherit; text-decoration: none; }
 .faq details[open] summary::after { transform: rotate(45deg); }
 .faq p { margin: 0 0 16px; color: var(--text-mid); }
 
+/* ---------- 이용 후기 ---------- */
+.review-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+.review {
+  background: var(--surface); border: 1px solid var(--surface-line);
+  border-radius: var(--r-md); padding: 20px; box-shadow: var(--ring);
+}
+.review .stars { color: var(--brand-500); font-size: 15px; letter-spacing: 1px; }
+.review .stars .off { color: var(--surface-line); }
+.review .r-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 8px 0 6px; }
+.review .r-who { font-weight: 750; color: var(--text-hi); font-size: 14px; }
+.review .r-date { color: var(--text-low); font-size: 12px; }
+.review .r-prog {
+  display: inline-block; margin-bottom: 10px; font-size: 12px; font-weight: 700;
+  color: var(--brand-400); background: var(--brand-soft); padding: 3px 10px; border-radius: var(--r-pill);
+}
+.review .r-body { color: var(--text-mid); font-size: 14px; line-height: 1.7; margin: 0; }
+.review-agg {
+  text-align: center; margin-bottom: 26px; color: var(--text-mid); font-size: 15px;
+}
+.review-agg strong { color: var(--brand-400); font-size: 22px; font-weight: 850; }
+.review-note { text-align: center; margin-top: 20px; color: var(--text-low); font-size: 12.5px; }
+
 /* ---------- Who/How/Why ---------- */
 .whw { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .whw article {
